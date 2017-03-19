@@ -176,13 +176,13 @@ The 8085A uses a multiplexed data bus. The address is split between the 8 bit ad
         Reset</td> 
       </tr>
       <tr>
-        <td colspan="3">* = 3-state (high impedance)</td>
+        <td colspan="4">* = 3-state (high impedance)</td>
       </tr>
       <tr>
-        <td colspan="3">X = unspecified</td>
+        <td colspan="4">X = unspecified</td>
       </tr>
-    </tbody></table>
-
+    </tbody>
+    </table>
     S1 can be used as an advanced R/<b><u>W</u></b> status. IO/<b><u>M</u></b>,
     S0 and s1 become valid at the beginning of a machine cycle and
     remain stable throughout the cycle. The falling edge of ALE may
