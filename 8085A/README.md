@@ -30,6 +30,11 @@ The 8085A uses a multiplexed data bus. The address is split between the 8 bit ad
    
   <tbody>
   <tr>
+    <th>Symbol</th>
+    <th>Type</th>
+    <th>Name and Function</th>
+  </tr>
+  <tr>
     <td width="10%">A<sub>8</sub>-A<sub>15</sub></td> 
     <td width="4%" align="CENTER">O</td> 
     <td width="86%"><b>Address Bus:</b> The most significan 8 bits of the memory
@@ -171,10 +176,10 @@ The 8085A uses a multiplexed data bus. The address is split between the 8 bit ad
         Reset</td> 
       </tr>
       <tr>
-        <td rowspan="3">* = 3-state (high impedance)</td>
+        <td colspan="3">* = 3-state (high impedance)</td>
       </tr>
       <tr>
-        <td rowspan="3">X = unspecified</td>
+        <td colspan="3">X = unspecified</td>
       </tr>
     </tbody></table>
 
