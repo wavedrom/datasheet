@@ -49,9 +49,16 @@ The 8085A has twelve addressable 8-bit registers. our of them can funtion only a
 
 The 8085A uses a multiplexed Data Bus. The address is split between the higher 8-bit Address Bus and the lower 8-bit Address/Data Bus. During the first T state (clock cycle) of a machine cycle the low order address is sent out on the Address/Data bus. These lower 8 bits may be latched externally by the Address Latch Enable signal (ALE). During the resto of the machine cycle the data bus is used for memory or I/O data.
 
-The 8085A provides RW, WR S0, S1 and IO/M signals for bus contro. An interrupt acknowledge signale (INTA) is also provided. HOLD and all interrupts are synchronized with the processor's internal clock. The 8085A also provides serial Input Data (SID) and Serial Output Data (SOD) lines for simple serial interface.
+The 8085A provides <o>RD</o>, <o>WR</o>, S<sub>0</sub>, S<sub>1</sub> and IO/<o>M</o> signals for bus control.
+An interrupt acknowledge signal (<o>INTA</o>) is also provided.
+HOLD and all interrupts are synchronized with the processor's internal clock.
+The 8085A also provides serial Input Data (SID) and Serial Output Data (SOD) lines for simple serial interface.
 
 In addition to these features, the 8085A has three maskable, vector interrupts pins and on nonmaskable TRAP interrupt.
+
+## INTERRUPT AND SERIAL I/O
+
+
 
 
 
