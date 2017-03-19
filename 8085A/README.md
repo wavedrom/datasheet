@@ -19,8 +19,12 @@ The 8085A incorporates all of the features that the 8224 (clock generator) and 8
 
 The 8085A uses a multiplexed data bus. The address is split between the 8 bit address bus and the 8 bit data bus. The on-chip address latches of 8155/8156/8355/8755A memory products allow a direct interface with the 8085A.
 
+---
+
 ![Fig1](fig1.png)
 
-Figure 1.
+---
+
+
 
 
