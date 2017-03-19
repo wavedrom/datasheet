@@ -28,34 +28,26 @@ The 8085A uses a multiplexed data bus. The address is split between the 8 bit ad
 <table width="98%" border="1" cellspacing="2" cellpadding="0">
   <caption align="TOP"><b><font face="Arial">Table 1. Pin Description</font></b></caption>
    
-  <tbody><tr>
-    <td width="10%">
-    &nbsp;A8-A15</td> 
-    <td width="4%" align="CENTER">
-    O</td> 
-    <td width="86%">
-    <b>Address Bus:</b> The most significan 8 bits of the memory
+  <tbody>
+  <tr>
+    <td width="10%">A<sub>8</sub>-A<sub>15</sub></td> 
+    <td width="4%" align="CENTER">O</td> 
+    <td width="86%"><b>Address Bus:</b> The most significan 8 bits of the memory
     address or the 8 bits of the I/O address, 3-stated during Hold
-    and Halt modes and during RESET</td> 
+    and Halt modes and during RESET.</td> 
   </tr>
   <tr>
-    <td width="10%">
-    AD0-AD7</td> 
-    <td width="4%" align="CENTER">
-    I/O</td> 
-    <td width="86%">
-    <b>Multiplexed Address/Data Bus:</b> Lower 8 bits of the memory
+    <td width="10%">AD<sub>0--7</sub></td> 
+    <td width="4%" align="CENTER">I/O</td> 
+    <td width="86%"><b>Multiplexed Address/Data Bus:</b> Lower 8 bits of the memory
     address (or I/O address) appear on the bus furing the first clock
     cycle (T state) of a machine Cycle. It then becomes the data
     bus furing the second and third clock cycles.</td> 
   </tr>
   <tr>
-    <td width="10%">
-    ALE</td> 
-    <td width="4%" align="CENTER">
-    O</td> 
-    <td width="86%">
-    <b>Address Latch Enable:</b> It occurs during the first clock
+    <td width="10%">ALE</td>
+    <td width="4%" align="CENTER">O</td> 
+    <td width="86%"><b>Address Latch Enable:</b> It occurs during the first clock
     state of a machine cycle and enables the address to get latched
     into the on-chip latch of peripherals. The falling edge of ALE
     is set to guarantee setup and hold times for the address information.
@@ -63,18 +55,15 @@ The 8085A uses a multiplexed data bus. The address is split between the 8 bit ad
     information. ALE is never 3-stated.</td> 
   </tr>
   <tr>
-    <td width="10%">
-    S0,S1 and IO/<b><u><font color="#000000">M</font></u></b></td> 
-    <td width="4%" align="CENTER">
-    &nbsp;O</td> 
-    <td width="86%">
-    <p><b>Machine Cycle Status:</b><br>
+    <td width="10%">S<sub>0</sub>,S<sub>1</sub> and IO/<o>M</o></td> 
+    <td width="4%" align="CENTER">O</td> 
+    <td width="86%"><b>Machine Cycle Status:</b><br>
     <table width="43%" border="1" cellspacing="2" cellpadding="0" height="350">
       <tbody><tr>
         <td width="8%" height="23">
-        &nbsp;IO/<b><u>M</u></b></td> 
+        IO/<b><u>M</u></b></td> 
         <td width="10%" height="23">
-        &nbsp;S1</td> 
+        S1</td> 
         <td width="10%" height="23">
         S0</td> 
         <td width="72%" height="23">
@@ -180,9 +169,12 @@ The 8085A uses a multiplexed data bus. The address is split between the 8 bit ad
         <td width="72%" height="23">
         Reset</td> 
       </tr>
+      <tr>* = 3-state (high impedance)
+      </tr>
+      <tr>
+      X = unspecified
+      </tr>
     </tbody></table><br>
-    * = 3-state (high impedance)<br>
-    X= unspecified</p>
 
     <p>S1 can be used as an advanced R/<b><u>W</u></b> status. IO/<b><u>M</u></b>,
     S0 and s1 become valid at the beginning of a machine cycle and
