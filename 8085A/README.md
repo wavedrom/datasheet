@@ -1,5 +1,3 @@
-<span style="text-decoration: overline;">O</span>
-
 # 8085A/8085A-2</br>SINGLE CHIP 8-BIT N-CHANNEL MICROPROCESSORS
 
  * Single +5V Power Supply
