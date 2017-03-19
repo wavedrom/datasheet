@@ -1,6 +1,4 @@
-<style>
-#o { text-decoration: overline; }
-</style>
+<style>o { text-decoration: overline; }</style>
 
 # 8085A/8085A-2</br>SINGLE CHIP 8-BIT N-CHANNEL MICROPROCESSORS
 
