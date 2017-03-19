@@ -190,8 +190,7 @@ The 8085A uses a multiplexed data bus. The address is split between the 8 bit ad
     </td> 
   </tr>
   <tr>
-    <td width="10%">
-    <b><u>R&#x305;D&#x305;</u></b></td> 
+    <td width="10%">R&#x305;D&#x305;</td> 
     <td width="4%" align="CENTER">
     O</td> 
     <td width="86%">
@@ -201,8 +200,7 @@ The 8085A uses a multiplexed data bus. The address is split between the 8 bit ad
     and Halt modes and during RESET.</td> 
   </tr>
   <tr>
-    <td width="10%">
-    <b><u>WR</u></b></td> 
+    <td width="10%">W&#x305;R&#x305;</td> 
     <td width="4%" align="CENTER">
     O</td> 
     <td width="86%">
