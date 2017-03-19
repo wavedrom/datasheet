@@ -60,7 +60,7 @@ The 8085A uses a multiplexed data bus. The address is split between the 8 bit ad
     information. ALE is never 3-stated.</td> 
   </tr>
   <tr>
-    <td width="10%">S<sub>0</sub>,S<sub>1</sub> and IO/M&#8254;</td> 
+    <td width="10%">S<sub>0</sub>,S<sub>1</sub> and IO/M&#x305;</td> 
     <td width="4%" align="CENTER">O</td> 
     <td width="86%"><b>Machine Cycle Status:</b><br>
     <table width="43%" border="1" cellspacing="2" cellpadding="0" height="350">
