@@ -191,7 +191,7 @@ The 8085A uses a multiplexed data bus. The address is split between the 8 bit ad
   </tr>
   <tr>
     <td width="10%">
-    <b><u>RD</u></b></td> 
+    <b><u>R&#x305;D&#x305;</u></b></td> 
     <td width="4%" align="CENTER">
     O</td> 
     <td width="86%">
