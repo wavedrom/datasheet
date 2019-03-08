@@ -1,0 +1,25 @@
+{
+  "name": "datasheet",
+  "version": "0.1.0",
+  "description": "Production quality Datasheet generator using Web technologies.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drom/datasheet.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drom/datasheet/issues"
+  },
+  "homepage": "https://github.com/drom/datasheet#readme"
+}
