@@ -15,6 +15,7 @@
     "datasheet": "./bin/cli.js"
   },
   "files": [
+    "bin",
     "lib",
     "build/datasheet.js"
   ],
