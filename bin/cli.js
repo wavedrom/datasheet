@@ -14,6 +14,7 @@ const nwBin = require('nw/lib/findpath.js');
 const argv = yargs
   .option('input', {alias: 'i', desc: 'path to the source'})
   .option('output', {alias: 'o', desc: 'path to the output folder'})
+  .option('log', {desc: 'path to the log file'})
   .demandOption(['input', 'output'])
   .help()
   .argv;
@@ -37,7 +38,10 @@ const main = async () => {
   );
 
   await fs.outputFile('./build/package.json', JSON.stringify(nwpkg, null, 4));
-  await execFile(nwBin(), [path.resolve('./build/')], {stdio: 'inherit'});
+  const { stderr } = await execFile(nwBin(), [path.resolve('./build/')]);
+  if (argv.log !== undefined) {
+    await fs.outputFile(argv.log, stderr);
+  }
   await fs.copy('datasheet.pdf', argv.output);
 };
 
