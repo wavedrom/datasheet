@@ -1,5 +1,6 @@
 {
     "name": "simple-app",
     "main": "index.html",
-    "chromium-args": "--enable-logging=stderr"
+    "window": {"show": false},
+    "chromium-args": "--enable-logging=stderr --headless --disable-gpu --no-sandbox --disable-setuid-sandbox"
 }

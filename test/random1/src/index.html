@@ -3,19 +3,48 @@
     <head>
         <title>Datasheet</title>
         <style>
+            body {
+              margin: 0px;
+            }
+            html {
+              /* padding: 0px;
+              margin: 0px; */
+            }
+            div {
+              padding: 0px;
+              /* margin: 0px; */
+            }
             #spacer {
-              shape-outside: polygon(0 0, 800px 0, 800px 50px, 0 50px, 0 700px, 800px 700px, 800px 750px, 0 750px, 0 1500px, 800px 1500px, 800px 1550px, 0 1550px);
-              width: 800px;
+              shape-outside: polygon(
+                0      0, 652px      0, 652px   50px, 0   50px,
+                0  960px, 652px  960px, 652px 1010px, 0 1010px,
+                0 2000px, 652px 2000px, 652px 2050px, 0 2050px
+              );
+              width: 652px;
               height: 3200px;
+              border: 1px solid #000;
               float: left;
+              padding: 0px;
+              margin: 0px;
+            }
+            #headerc {
+              position: fixed;
+              text-align: right;
+              top: 0px;
+              left: 0px;
+              width: 649px;
+              height: 30px;
+              border: 1px solid #0f0;
+              background: rgba(0, 255, 0, 0.1);
             }
         </style>
     </head>
     <body>
-        <div class="container">
-            <div id="spacer"></div>
-            <div id="content"></div>
-        </div>
-        <script src="app.js"></script>
+      <div class="container">
+        <div id="spacer"></div>
+        <div id="content"></div>
+        <div id="headerc">Header</div>
+      </div>
+      <script src="app.js"></script>
     </body>
 </html>
