@@ -2,9 +2,11 @@
 <html>
     <head>
         <title>Datasheet</title>
+        <style id="styleSpacer"></style>
         <style>
             body {
               margin: 0px;
+              font-size: 16px;
             }
             html {
               /* padding: 0px;
@@ -14,36 +16,28 @@
               padding: 0px;
               /* margin: 0px; */
             }
-            #spacer {
-              shape-outside: polygon(
-                0      0, 652px      0, 652px   50px, 0   50px,
-                0  960px, 652px  960px, 652px 1010px, 0 1010px,
-                0 2000px, 652px 2000px, 652px 2050px, 0 2050px
-              );
-              width: 652px;
-              height: 3200px;
-              border: 1px solid #000;
-              float: left;
-              padding: 0px;
-              margin: 0px;
+            h2 {
+              break-before: page;
+              page-break-before: page;
             }
-            #headerc {
-              position: fixed;
-              text-align: right;
-              top: 0px;
-              left: 0px;
-              width: 649px;
-              height: 30px;
-              border: 1px solid #0f0;
-              background: rgba(0, 255, 0, 0.1);
+            .hdr {
+              z-index: 10;
+              position: absolute;
+              text-align: left;
+              width: 100px;
+              height: 15px;
             }
         </style>
     </head>
     <body>
+      <div id="headerl">HL</div>
+      <div id="footerl">FL</div>
+      <div id="headerr">HR</div>
+      <div id="footerr">FR</div>
       <div class="container">
+        <div id="headers"></div>
         <div id="spacer"></div>
         <div id="content"></div>
-        <div id="headerc">Header</div>
       </div>
       <script src="app.js"></script>
     </body>
