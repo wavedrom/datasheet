@@ -7,33 +7,91 @@
             body {
               margin: 0px;
               font-size: 16px;
+              counter-reset: h2counter;
             }
             html {
-              /* padding: 0px;
-              margin: 0px; */
+              padding: 0;
+              margin: 0;
+            }
+            p {
+              hyphens: auto;
+              text-align: justify;
             }
             div {
               padding: 0px;
               /* margin: 0px; */
             }
             h2 {
-              break-before: page;
-              page-break-before: page;
+              counter-reset: h3counter;
+            }
+            h2:before {
+              content: counter(h2counter) "\0000a0\0000a0";
+              counter-increment: h2counter;
+            }
+            h3:before {
+              content: counter(h2counter) "." counter(h3counter) "\0000a0\0000a0";
+              counter-increment: h3counter;
+            }
+            @media print {
+              h2 {
+                      break-before: right;
+                 page-break-before: right;
+              }
+              h3 {
+                break-after: avoid-page;
+              }
             }
             .hdr {
               z-index: 10;
               position: absolute;
-              text-align: left;
+              width: 100%;
+              font-size: 10pt;
+              height: 15px;
+            }
+            .hedr {
+              top: 0px;
+              position: fixed;
+              z-index: 5;
               width: 100px;
               height: 15px;
+              border: 1px solid #f00;
+              background: rgba(255, 0, 0, 0.1);
+            }
+            .foot {
+              bottom: 0px;
+              position: fixed;
+              z-index: 5;
+              width: 100px;
+              height: 15px;
+              border: 1px solid #00f;
+              background: rgba(0, 0, 255, 0.1);
+            }
+            .gleft {
+              left: 0px;
+              text-align: left;
+            }
+            .gcenter {
+              text-align: center;
+              left: 50%;
+              margin-left: -50px;
+            }
+            .gright {
+              right: 0px;
+              text-align: right;
             }
         </style>
     </head>
     <body>
-      <div id="headerl">HL</div>
-      <div id="footerl">FL</div>
-      <div id="headerr">HR</div>
-      <div id="footerr">FR</div>
+
+      <!-- calibration boxes -->
+      <!-- <div class="hedr gleft"></div>
+      <div class="hedr gcenter"></div>
+      <div class="hedr gright"></div>
+
+      <div class="foot gleft"></div>
+      <div class="foot gcenter"></div>
+      <div class="foot gright"></div> -->
+
       <div class="container">
         <div id="headers"></div>
         <div id="spacer"></div>

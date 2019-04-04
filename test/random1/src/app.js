@@ -63,6 +63,7 @@ function nwPrint () {
           headerFooterEnabled: false,
           shouldPrintBackgrounds: true,
           marginsType: 3,
+          duplex: 2,
           marginsCustom: {
             marginBottom: 20,
             marginLeft: 60,
@@ -83,32 +84,45 @@ function nwPrint () {
   }, 3000);
 }
 
-var styleSpacer = document.getElementById('styleSpacer');
-
 const dy = 949 + 53; // 27 + 27;
-const h = 30 + 30;
+const h = 30 + 40;
 const w = 653; // 654;
-const pages = 200;
-const ypad = 9 + 30;
+const pages = 300;
+const ypad = 9 + 40;
 
 const comb = () => {
   let res = [];
   for (let i = 0; i < pages; i++) {
     res.push(`0 ${i * dy - ypad}px, ${w}px ${i * dy - ypad}px, ${w}px ${i * dy + h - ypad}px, 0 ${i * dy + h - ypad}px`);
   }
-  console.log(res);
   return res.join(',\n');
 };
 
-const headers = pages => {
+const bottomOuter = (pages, cb) => {
   let res = [];
   for (let i = 1; i <= pages; i++) {
-    res.push('<div class="hdr" style="top: ' + (i * dy) + 'px;">' + (i + 1) + '</div>');
+    res.push(`<div class="hdr g${(i & 1) ? 'left' : 'right'}" style="top: ${(i + 1) * dy - 20}px;">${cb(i)}</div>`);
   }
   return res.join('');
 };
 
-styleSpacer.innerHTML = `
+const bottomInner = (pages, cb) => {
+  let res = [];
+  for (let i = 1; i <= pages; i++) {
+    res.push(`<div class="hdr g${(i & 1) ? 'right' : 'left'}" style="top: ${(i + 1) * dy - 20}px;">${cb(i)}</div>`);
+  }
+  return res.join('');
+};
+
+const topCenter = (pages, cb) => {
+  let res = [];
+  for (let i = 1; i <= pages; i++) {
+    res.push(`<div class="hdr topcntr" style="top: ${i * dy + 5}px; text-align: center">${cb(i + 1)}</div>`);
+  }
+  return res.join('');
+};
+
+document.getElementById('styleSpacer').innerHTML = `
 #spacer {
   shape-outside: polygon(${comb()});
   width: ${w}px;
@@ -118,63 +132,24 @@ styleSpacer.innerHTML = `
   padding: 0px;
   margin: 0px;
 }
-#headerl {
-  z-index: 5;
-  position: fixed;
-  text-align: right;
-  top: 0px;
-  left: 0px;
-  width: 100px;
-  height: 15px;
-  font-size: 16px;
-  border: 1px solid #f00;
-  background: rgba(255, 0, 0, 0.1);
-}
-#footerl {
-  z-index: 5;
-  position: fixed;
-  text-align: right;
-  bottom: 0px;
-  left: 0px;
-  width: 100px;
-  height: 15px;
-  font-size: 16px;
-  border: 1px solid #00f;
-  background: rgba(0, 0, 255, 0.1);
-}
-#headerr {
-  z-index: 5;
-  position: fixed;
-  text-align: left;
-  top: 0px;
-  right: 0px;
-  width: 100px;
-  height: 15px;
-  font-size: 16px;
-  border: 1px solid #f00;
-  background: rgba(255, 0, 0, 0.1);
-}
-#footerr {
-  z-index: 5;
-  position: fixed;
-  text-align: left;
-  bottom: 0px;
-  right: 0px;
-  width: 100px;
-  height: 15px;
-  font-size: 16px;
-  border: 1px solid #00f;
-  background: rgba(0, 0, 255, 0.1);
-}
 `;
 
-var contentDiv = document.getElementById('content');
+document.getElementById('content').innerHTML = randomBook(100, 10, 10, 10);
 
-contentDiv.innerHTML = randomBook(100, 10, 10, 10);
+document.getElementById('headers').innerHTML = bottomOuter(pages, i => i + 1)
+  + bottomInner(pages, () => '<i>Lorem ipsum</i>')
+  + topCenter(pages, i => ((i & 1) ? 'Section' : 'Chapter') + ' on page: ' + i);
 
-var headersDiv = document.getElementById('headers');
-
-headersDiv.innerHTML = headers(pages);
+window.matchMedia('print').addListener(() => {
+  console.log('---------------------------------------');
+  document.querySelectorAll('h2,h3').forEach(block => { // .topcntr
+    // const offset = block.offset();
+    // const center = rect.top + rect.height / 2;
+    // const page = rect.top; // ) / 92862.015625 / 87;
+    // console.log(page);
+    console.log(JSON.stringify({name: block.innerHTML, offset: block.offsetTop / dy}));
+  });
+});
 
 nwPrint();
 
