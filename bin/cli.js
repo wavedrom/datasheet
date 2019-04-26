@@ -42,7 +42,10 @@ const main = async () => {
   if (argv.log !== undefined) {
     await fs.outputFile(argv.log, stderr);
   }
-  await fs.copy('datasheet.pdf', argv.output);
+  await fs.copy(
+    path.resolve(process.cwd(), 'datasheet.pdf'),
+    argv.output
+  );
 };
 
 main();
