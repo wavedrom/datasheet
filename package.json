@@ -33,7 +33,7 @@
   "devDependencies": {
     "@drom/eslint-config": "^0.10.0",
     "chai": "^4.1.2",
-    "eslint": "^5.16.0",
+    "eslint": "^6.8.0",
     "fs-extra": "^8.1.0",
     "mocha": "^6.2.2",
     "nyc": "^14.1.1"
@@ -41,12 +41,12 @@
   "dependencies": {
     "asciidoctor.js": "^1.5.9",
     "browserify": "^16.5.0",
-    "highlight.js": "^9.16.2",
+    "highlight.js": "^9.18.0",
     "lodash.range": "^3.2.0",
-    "onml": "^1.1.0",
+    "onml": "^1.2.0",
     "wavedrom": "^2.1.6",
-    "nw": "^0.42.4",
-    "yargs": "^13.2.1"
+    "nw": "^0.43.6",
+    "yargs": "^15.1.0"
   },
   "eslintConfig": {
     "extends": "@drom/eslint-config/eslint4/node8"
