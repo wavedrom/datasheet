@@ -20,26 +20,18 @@ const argv = yargs
 
 const main = async () => {
   // console.log('start');
-  await bundler(
-    argv.input,
-    path.resolve(__dirname, '../lib/app.js'),
-    './index1.html'
-  );
-  // console.log('bundler 1 done');
-  await bundler(
-    argv.input,
-    path.resolve(__dirname, '../lib/nwapp.js'),
-    './index.html'
-  );
-  // console.log('bundler 2 done');
+  await bundler(argv.input, path.resolve(__dirname, '../lib/app.js'), './index1.html');
+  console.log('bundler 1 done');
+  await bundler(argv.input, path.resolve(__dirname, '../lib/nwapp.js'), './index.html');
+  console.log('bundler 2 done');
   nwpkg.output = path.basename(argv.output);
   await fs.outputFile('./package.json', JSON.stringify(nwpkg, null, 4));
   childProcess.execFile(nwBin(), [path.resolve('./')], (error, stdout, stderr) => {
     if (error) {
       throw error;
     }
-    // console.log(stdout);
-    // console.error(stderr);
+    console.log(stdout);
+    console.error(stderr);
     if (argv.log !== undefined) {
       fs.outputFile(argv.log, stderr);
     }
