@@ -84,16 +84,19 @@ function nwPrint () {
   }, 3000);
 }
 
-const dy = 949 + 53; // 27 + 27;
-const h = 30 + 40;
-const w = 653; // 654;
+const ptpi = 96;
+const dy = (11 - .25 - .25) * ptpi; // 949 + 53; // 27 + 27;
+// const h = 30 + 40;
+const w = (8.5 - .75 - .75) * ptpi - 2; // 653; // 654;
 const pages = 300;
-const ypad = 9 + 40;
+// const ypad = 9 + 40;
+const yfoot = .75 * ptpi;
+const yhead = .5  * ptpi;
 
 const comb = () => {
   let res = [];
   for (let i = 0; i < pages; i++) {
-    res.push(`0 ${i * dy - ypad}px, ${w}px ${i * dy - ypad}px, ${w}px ${i * dy + h - ypad}px, 0 ${i * dy + h - ypad}px`);
+    res.push(`0 ${i * dy - yfoot}px, ${w}px ${i * dy - yfoot}px, ${w}px ${i * dy + yhead}px, 0 ${i * dy + yhead}px`);
   }
   return res.join(',\n');
 };
