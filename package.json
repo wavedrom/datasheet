@@ -35,15 +35,15 @@
     "chai": "^4.1.2",
     "eslint": "^6.8.0",
     "fs-extra": "^8.1.0",
-    "mocha": "^6.2.2",
+    "mocha": "^6.2.3",
     "nyc": "^15.1.0"
   },
   "dependencies": {
     "asciidoctor.js": "^1.5.9",
     "browserify": "^16.5.1",
-    "highlight.js": "^9.18.1",
+    "highlight.js": "^9.18.3",
     "lodash.range": "^3.2.0",
-    "nw": "^0.47.1",
+    "nw": "^0.47.3",
     "onml": "^1.2.0",
     "pdf-lib": "^1.9.0",
     "pdfjs-dist": "^2.4.456",
