@@ -12,7 +12,7 @@
     "prepublish": "npm run test && mkdir -p build && npm run browserify"
   },
   "bin": {
-    "datasheet": "./bin/cli.js"
+    "datasheet": "bin/cli.js"
   },
   "files": [
     "bin",
@@ -32,7 +32,7 @@
   "homepage": "https://github.com/wavedrom/datasheet#readme",
   "devDependencies": {
     "@drom/eslint-config": "^0.10.0",
-    "chai": "^4.1.2",
+    "chai": "^4.2.0",
     "eslint": "^6.8.0",
     "fs-extra": "^8.1.0",
     "mocha": "^6.2.3",
@@ -43,10 +43,10 @@
     "browserify": "^16.5.1",
     "highlight.js": "^9.18.3",
     "lodash.range": "^3.2.0",
-    "nw": "^0.47.3",
+    "nw": "^0.49.1",
     "onml": "^1.2.0",
-    "pdf-lib": "^1.9.0",
-    "pdfjs-dist": "^2.4.456",
+    "pdf-lib": "^1.11.2",
+    "pdfjs-dist": "^2.5.207",
     "wavedrom": "^2.6.8",
     "yargs": "^15.1.0"
   },
