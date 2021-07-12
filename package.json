@@ -1,6 +1,6 @@
 {
   "name": "datasheet",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Production quality Datasheet generator using Web technologies.",
   "main": "lib/",
   "directories": {
