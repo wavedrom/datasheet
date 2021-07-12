@@ -7,7 +7,7 @@ const childProcess = require('child_process');
 const fs = require('fs-extra');
 const yargs = require('yargs');
 const nwBin = require('nw/lib/findpath.js');
-const pdfjsLib = require('pdfjs-dist/lib/pdf.js');
+const pdfjsLib = require('pdfjs-dist/legacy/build/pdf.js');
 const pdfLib = require('pdf-lib');
 
 const bundler = require('../lib/bundler.js');

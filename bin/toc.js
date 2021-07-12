@@ -3,7 +3,7 @@
 
 const fs = require('fs-extra');
 const yargs = require('yargs');
-const pdfjsLib = require('pdfjs-dist/lib/pdf.js');
+const pdfjsLib = require('pdfjs-dist/legacy/build/pdf.js');
 
 const nwpkg = require('../lib/nwpkg.js');
 const tocExtract = require('../lib/toc-extract.js');

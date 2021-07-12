@@ -4,7 +4,7 @@
 const fs = require('fs-extra');
 const yargs = require('yargs');
 const pdfLib = require('pdf-lib');
-const pdfjsLib = require('pdfjs-dist/lib/pdf.js');
+const pdfjsLib = require('pdfjs-dist/legacy/build/pdf.js');
 
 const argv = yargs
   .option('input', {alias: 'i', desc: 'path to the input PDF'})
