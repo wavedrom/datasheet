@@ -2,6 +2,15 @@ Production quality [Datasheet](https://en.wikipedia.org/wiki/Datasheet) generato
 
 ## CLI Usage
 
+### With install
+
+```
+npm i datasheet
+datasheet -i myspec.adoc -o myspec.pdf
+```
+
+### Without installing
+
 ```
 npx datasheet -i myspec.adoc -o myspec.pdf
 ```
