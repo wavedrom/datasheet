@@ -3,7 +3,7 @@
 
 const yargs = require('yargs');
 
-const {adoc2pdf} = require('../lib');
+const { adoc2pdf } = require('../lib');
 
 const argv = yargs
   .option('input', {alias: 'i', desc: 'path to the source'})

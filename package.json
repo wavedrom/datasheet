@@ -8,18 +8,15 @@
   },
   "scripts": {
     "test": "eslint lib/*.js",
-    "browserify": "browserify --standalone datasheet lib/index.js > build/datasheet.js",
-    "prepublish": "npm run test && mkdir -p build && npm run browserify"
+    "prepublish": "npm run test"
   },
   "bin": {
     "datasheet": "bin/cli.js"
   },
   "files": [
     "bin",
-    "lib",
-    "build/datasheet.js"
+    "lib"
   ],
-  "unpkg": "build/datasheet.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wavedrom/datasheet.git"
@@ -45,8 +42,8 @@
     "lodash.range": "^3.2.0",
     "onml": "^2.1.0",
     "pdf-lib": "^1.16.0",
-    "pdfjs-dist": "^3.4.120",
-    "puppeteer": "^19.7.5",
+    "pdfjs-dist": "3.6",
+    "puppeteer": "^20",
     "wavedrom": "^3.2.0",
     "yargs": "^17.0.1"
   },
