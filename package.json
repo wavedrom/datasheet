@@ -28,26 +28,24 @@
   },
   "homepage": "https://github.com/wavedrom/datasheet#readme",
   "devDependencies": {
-    "@drom/eslint-config": "^0.12.0",
-    "chai": "^5.1.1",
-    "eslint": "^8.57.0",
-    "fs-extra": "^11.2.0",
-    "mocha": "^10.6.0",
-    "nyc": "^17.0.0"
+    "@drom/eslint-config": "0.12.0",
+    "chai": "5.2.0",
+    "eslint": "^8.57.1",
+    "mocha": "11.1.0",
+    "nyc": "17.1.0"
   },
   "dependencies": {
-    "asciidoctor": "^3.0.4",
-    "browserify": "^17.0.0",
-    "highlight.js": "^11.10.0",
-    "lodash.range": "^3.2.0",
-    "onml": "^2.1.0",
-    "pdf-lib": "^1.16.0",
-    "pdfjs-dist": "4.4.168",
-    "puppeteer": "^22.13.1",
-    "wavedrom": "^3.5.0",
-    "yargs": "^17.0.1"
+    "asciidoctor": "3.0.4",
+    "browserify": "17.0.1",
+    "commander": "^13.1.0",
+    "fs-extra": "11.3.0",
+    "highlight.js": "11.11.1",
+    "lodash.range": "3.2.0",
+    "onml": "2.1.0",
+    "puppeteer": "24.4.0",
+    "wavedrom": "3.5.0"
   },
   "eslintConfig": {
-    "extends": "@drom/eslint-config/eslint4/node8"
+    "extends": "@drom/eslint-config/eslint8/node12"
   }
 }
