@@ -14,3 +14,7 @@ datasheet -i myspec.adoc -o myspec.pdf
 ```
 npx datasheet -i myspec.adoc -o myspec.pdf
 ```
+
+## References
+
+[F. Raymond Dewey. A Complete Guide to Data Sheets](https://www.allegromicro.com/-/media/files/technical-documents/complete-guide-to-datasheets-pub26000.pdf)
