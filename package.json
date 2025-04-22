@@ -42,6 +42,7 @@
     "highlight.js": "11.11.1",
     "lodash.range": "3.2.0",
     "onml": "2.1.0",
+    "pdfjs-dist": "^5.1.91",
     "puppeteer": "24.4.0",
     "wavedrom": "3.5.0"
   },
