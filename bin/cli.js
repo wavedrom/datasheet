@@ -9,6 +9,7 @@ const main = async () => {
   program
     .requiredOption('-i, --input <file>', 'path to the source')
     .requiredOption('-o, --output <file>', 'path to the output PDF')
+    .option('-c, --config <file>', 'document template')
     .option('--log <file>', 'path to the log file')
     .parse(process.argv);
 
