@@ -9,12 +9,13 @@ const outputFile = async (file, data) => {
   await fs.mkdir(path.dirname(file), {recursive: true});
   await fs.writeFile(file, data);
 };
-const pdfjsLib = require('pdfjs-dist/legacy/build/pdf.js');
+const pdfjsLibP = import('pdfjs-dist/legacy/build/pdf.mjs');
 
 const nwpkg = require('../lib/nwpkg.js');
 const tocExtract = require('../lib/toc-extract.js');
 
 const main = async argv => {
+  const pdfjsLib = await pdfjsLibP;
   const loadingTask = pdfjsLib.getDocument(argv.input);
   const doc = await loadingTask.promise;
   const TOC = await tocExtract(doc);

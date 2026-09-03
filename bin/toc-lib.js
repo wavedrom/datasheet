@@ -10,7 +10,7 @@ const outputFile = async (file, data) => {
   await fs.writeFile(file, data);
 };
 const pdfLib = require('pdf-lib');
-const pdfjsLib = require('pdfjs-dist/legacy/build/pdf.js');
+const pdfjsLibP = import('pdfjs-dist/legacy/build/pdf.mjs');
 
 const argv = yargs
   .option('input', {alias: 'i', desc: 'path to the input PDF'})
@@ -21,6 +21,7 @@ const argv = yargs
   .argv;
 
 const getTOC = async argv => {
+  const pdfjsLib = await pdfjsLibP;
   const loadingTask = pdfjsLib.getDocument(argv.input);
   const doc = await loadingTask.promise;
   console.log(doc.numPages);
