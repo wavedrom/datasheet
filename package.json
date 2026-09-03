@@ -44,5 +44,9 @@
     "pdfjs-dist": "^6.3.289",
     "puppeteer": "25.9.0",
     "wavedrom": "3.7.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "puppeteer@25.9.0": true
   }
 }
