@@ -1,8 +1,14 @@
 #!/usr/bin/env node
 'use strict';
 
-const fs = require('fs-extra');
+const fs = require('fs/promises');
+const path = require('path');
 const yargs = require('yargs');
+
+const outputFile = async (file, data) => {
+  await fs.mkdir(path.dirname(file), {recursive: true});
+  await fs.writeFile(file, data);
+};
 const pdfLib = require('pdf-lib');
 const pdfjsLib = require('pdfjs-dist/legacy/build/pdf.js');
 
@@ -74,7 +80,7 @@ const main = async () => {
   // });
 
   const outputPdfBytes = await pdfDoc.save();
-  await fs.outputFile(argv.output, outputPdfBytes);
+  await outputFile(argv.output, outputPdfBytes);
 };
 
 main();

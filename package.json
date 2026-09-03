@@ -37,7 +37,6 @@
   "dependencies": {
     "asciidoctor": "3.0.4",
     "browserify": "17.0.1",
-    "fs-extra": "11.3.0",
     "highlight.js": "11.11.1",
     "lodash.range": "3.2.0",
     "onml": "2.1.0",

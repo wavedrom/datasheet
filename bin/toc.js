@@ -1,8 +1,14 @@
 #!/usr/bin/env node
 'use strict';
 
-const fs = require('fs-extra');
+const fs = require('fs/promises');
+const path = require('path');
 const yargs = require('yargs');
+
+const outputFile = async (file, data) => {
+  await fs.mkdir(path.dirname(file), {recursive: true});
+  await fs.writeFile(file, data);
+};
 const pdfjsLib = require('pdfjs-dist/legacy/build/pdf.js');
 
 const nwpkg = require('../lib/nwpkg.js');
@@ -13,7 +19,7 @@ const main = async argv => {
   const doc = await loadingTask.promise;
   const TOC = await tocExtract(doc);
   const result = Object.assign(nwpkg, {numPaages: doc.numPages, TOC});
-  await fs.outputFile(argv.output, JSON.stringify(result, null, 2));
+  await outputFile(argv.output, JSON.stringify(result, null, 2));
 };
 
 const argv = yargs
