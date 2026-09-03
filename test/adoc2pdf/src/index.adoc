@@ -1,0 +1,11 @@
+= Test Datasheet
+:doctype: book
+
+== Chapter 1
+
+Simple test document used to exercise adoc2pdf end-to-end,
+including the pdf.js `getDocument` call in toc-extract.
+
+== Chapter 2
+
+More content.
