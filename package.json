@@ -43,6 +43,6 @@
     "onml": "2.1.0",
     "pdfjs-dist": "^6.3.289",
     "puppeteer": "25.9.0",
-    "wavedrom": "3.5.0"
+    "wavedrom": "3.7.0"
   }
 }
