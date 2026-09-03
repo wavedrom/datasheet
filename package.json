@@ -40,7 +40,6 @@
     "asciidoctor": "3.0.4",
     "esbuild": "0.28.2",
     "highlight.js": "11.11.1",
-    "lodash.range": "3.2.0",
     "onml": "2.1.0",
     "pdfjs-dist": "^6.3.289",
     "puppeteer": "25.9.0",
